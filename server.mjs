@@ -1,6 +1,8 @@
 // Import
 import express from "express";
 import dotenv from "dotenv";
+import globalMiddle from "./middleware/globalMiddle.mjs";
+import logmiddle from "./middleware/logmiddle.mjs";
 
 
 
@@ -17,17 +19,10 @@ const PORT = process.env.PORT ||3001;
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use((req,res,next)=>{
-  console.log(`{req.method}-${req.path}`);
-  next;
-
-})
+app.use(logmiddle);
 
 // Global Err Handling
-app.use((err,req,res,next)=>{
-  res.status(500).json({msg:`Error-${err.messae}`});
-
-})
+app.use(globalMiddle);
 
 
 // app.use(log);
