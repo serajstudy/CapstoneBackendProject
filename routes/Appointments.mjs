@@ -1,48 +1,44 @@
-// Import
 import express from "express";
-import dotenv from "dotenv";
+import Appointment from "../models/Appointment.mjs";
+const router = express.Router();
 
 
 
 
-// Setups
- 
-dotenv.config();
-const app = express();
-const PORT = process.env.PORT ||3001;
 
-// DB Connection
+// Create
 
-// Middleware
+router
+.route("/")
+.get(async(req,res)=>{
+    let appts = await Appointment.find({});
+    res.json(appts);
+})
 
-app.use(express.json());
-app.use(express.urlencoded({extended:true}));
-app.use((req,res,next)=>{
-  console.log(`{req.method}-${req.path}`);
-  next;
+.post(async(req,res)=>{
+    let newAppt = await Appointment.create(req.body);
+    res.json(newAppt);
+})
+
+router
+.route("/:id")
+.get(async(req,res)=>{
+    let atAppt = await Appointment.findById(req.params.id);
+    res.json(atAppt);
 
 })
 
-// Global Err Handling
-app.use((err,req,res,next)=>{
-  res.status(500).json({msg:`Error-${err.messae}`});
+.put(async(req,res)=>{
+    let updateAppt = await Appointment.findByIdAndUpdate(req.params.id,req.body,{new:true});
+    res.json(updateAppt);
 
 })
 
-
-// app.use(log);
-// app.use(cors());
-
-// Routes
-// Routes
-app.get("/", (req, res) => {
-  res.send("Testing, Home path");
+.delete(async(req,res)=>{
+    let deletedAppt = await Appointment.findByIdAndDelete(req.params.id);
+    if(!deletedAppt) res.json({msg:"err doesnot exit"});
+    else res.json(deletedAppt);
 });
 
+export default router;
 
-
-
-// Listener
- app.listen(PORT,()=>{
-    console.log(`This Server is Running On this Port:${PORT}`)
- });
