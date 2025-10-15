@@ -16,7 +16,20 @@ const PORT = process.env.PORT ||3001;
 // Middleware
 
 app.use(express.json());
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:true}));
+app.use((req,res,next)=>{
+  console.log(`{req.method}-${req.path}`);
+  next;
+
+})
+
+// Global Err Handling
+app.use((err,req,res,next)=>{
+  res.status(500).json({msg:`Error-${err.messae}`});
+
+})
+
+
 // app.use(log);
 // app.use(cors());
 
@@ -27,7 +40,7 @@ app.get("/", (req, res) => {
 });
 
 
-// Global Err Handling
+
 
 // Listener
  app.listen(PORT,()=>{
