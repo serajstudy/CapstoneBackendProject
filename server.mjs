@@ -3,6 +3,8 @@ import express from "express";
 import dotenv from "dotenv";
 import globalMiddle from "./middleware/globalMiddle.mjs";
 import logmiddle from "./middleware/logmiddle.mjs";
+import AppointmentsRoutes from "./routes/Appointments.mjs";
+import CountriesRoute from "./routes/Countries.mjs";
 
 
 
@@ -29,6 +31,11 @@ app.use(globalMiddle);
 // app.use(cors());
 
 // Routes
+
+app.use("/api/appointments", AppointmentsRoutes);
+app.use("/api/countries", CountriesRoute);
+
+
 // Routes
 app.get("/", (req, res) => {
   res.send("Testing, Home path");
