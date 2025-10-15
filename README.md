@@ -3,7 +3,7 @@
  
 
 # BaseEducation
-BaseEducation is a full-stack MERN (MongoDB/ MoogseDB, Express.js, React.js, Node.js) web application designed to help students explore study abroad opportunities, register for preparation classes, read blogs, and counseling appointments with educational advisors. Many students face confusion when preparing to study abroad, BaseEducation simplifies this by centralizing country info, services, blogs, and appointments.
+BaseEducation is a full-stack MERN (MongoDB/ MoogseDB, Express.js, React.js, Node.js) web application designed to help students explore study abroad opportunities, register for preparation classes, read blogs, and counseling appointments with educational advisors. Many students face confusion when preparing to study abroad, BaseEducation simplifies this by centralizing country infomation, services, blogs, and appointments.
 
 
 
