@@ -1,6 +1,19 @@
 import express from "express";
-import Appointment from "../models/Appointment.mjs";
+import Appointment from "../models/AppointmentSchema.mjs";
 const router = express.Router();
+
+
+router.get("/seed", async(req,res)=>{
+    try {
+        await Appointment.deleteMany({});
+        await Appointment.insertMany(Appointment);
+        res.send("Sucess : database seeded and updated");
+        
+    } catch (err) {
+        console.error(err.message);
+        
+    }
+});
 
 
 

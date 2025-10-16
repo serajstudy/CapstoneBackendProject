@@ -1,6 +1,9 @@
 import express from "express";
-import country from "../models/Country.mjs";
-const router = express.Router();
+import Country from "../models/CountrySchema.mjs";
+
+
+    const router = express.Router();
+
 
 // Create
 

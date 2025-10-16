@@ -5,6 +5,13 @@ import globalMiddle from "./middleware/globalMiddle.mjs";
 import logmiddle from "./middleware/logmiddle.mjs";
 import AppointmentsRoutes from "./routes/Appointments.mjs";
 import CountriesRoute from "./routes/Countries.mjs";
+import connectDB from "./config/dbconn.mjs";
+
+
+
+// import AppointmentSchema from "./models/AppointmentSchema.mjs";
+// import Country from "./models/CountrySchema.mjs";
+// import User from "./models/UserSchema.mjs";
 
 
 
@@ -16,6 +23,8 @@ const app = express();
 const PORT = process.env.PORT ||3001;
 
 // DB Connection
+connectDB();
+
 
 // Middleware
 
@@ -36,10 +45,10 @@ app.use("/api/appointments", AppointmentsRoutes);
 app.use("/api/countries", CountriesRoute);
 
 
-// Routes
-app.get("/", (req, res) => {
-  res.send("Testing, Home path");
-});
+// // Routes
+// app.get("/", (req, res) => {
+//   res.send("Testing, Home path");
+// });
 
 
 
