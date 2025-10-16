@@ -1,9 +1,23 @@
 import mongoose from "mongoose";
 
-const AppointmentSchema = new mongoose.Schema({
-    name : { type : String, required:true},
-    user : {type : String},
-    message : {type : String}
+const AppointmentSchema = new mongoose.Schema({ 
+
+    countryId : 
+    { type: mongoose.Schema.Types.ObjectId, 
+        ref: "Country", 
+        required: true,
+    },
+    
+    userId : 
+    {type: mongoose.Schema.Types.ObjectId, 
+        ref: "User", 
+        required: true,
+    },
+
+    message : 
+    { type: String, 
+        required: true, 
+    },
 
 })
 

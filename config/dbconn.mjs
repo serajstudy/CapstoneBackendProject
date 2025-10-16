@@ -9,9 +9,9 @@ async function connectDB() {
 
     try {
 
+        console.log()
         await mongoose.connect(connectionStr,{
-            seNewUrlParser: true,
-            useUnifiedTopology: true,
+       
         });
         console.log(`MongooseDB Connected here`);
         

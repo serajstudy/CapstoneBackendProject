@@ -5,13 +5,12 @@ import globalMiddle from "./middleware/globalMiddle.mjs";
 import logmiddle from "./middleware/logmiddle.mjs";
 import AppointmentsRoutes from "./routes/Appointments.mjs";
 import CountriesRoute from "./routes/Countries.mjs";
+import UserRoutes from "./routes/Users.mjs"
 import connectDB from "./config/dbconn.mjs";
 
 
 
-// import AppointmentSchema from "./models/AppointmentSchema.mjs";
-// import Country from "./models/CountrySchema.mjs";
-// import User from "./models/UserSchema.mjs";
+
 
 
 
@@ -41,8 +40,11 @@ app.use(globalMiddle);
 
 // Routes
 
-app.use("/api/appointments", AppointmentsRoutes);
+app.use("/api/appointment", AppointmentsRoutes);
 app.use("/api/countries", CountriesRoute);
+app.use("/api/users", UserRoutes);
+
+
 
 
 // // Routes

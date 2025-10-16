@@ -1,8 +1,26 @@
 import express from "express";
 import Country from "../models/CountrySchema.mjs";
+import { countriesData } from "../data/data.mjs";
+const router = express.Router();
+
+router.get("/seed", async(req,res)=>{
+    try {
+        await Country.deleteMany({});
+        await Country.insertMany(countriesData);
+        res.send("Sucess: database seeded and updated")
+        
+    } catch (err) {
+        console.json(err)
+        console.error(err.message);
+
+        
+    }
+
+})
 
 
-    const router = express.Router();
+
+    
 
 
 // Create
