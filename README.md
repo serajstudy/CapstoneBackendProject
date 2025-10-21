@@ -34,6 +34,12 @@ GET     	/api/appointments	    Fetch all appointments
 POST    	/api/appointments	    Create a new appointment
 PUT     	/api/appointments/:id	Update an appointment
 DELETE  	/api/appointments/:id	Delete an appointment
+
+# Users.mjs  get post put delete
+GET     	/api/users	    Fetch all appointments
+POST    	/api/users	    Create a new appointment
+PUT     	/api/users/:id	Update an appointment
+DELETE  	/api/users/:id	Delete an appointment
 # /middleware
 logmiddle
 global middle

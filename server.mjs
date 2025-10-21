@@ -7,7 +7,7 @@ import AppointmentsRoutes from "./routes/Appointments.mjs";
 import CountriesRoute from "./routes/Countries.mjs";
 import UserRoutes from "./routes/Users.mjs"
 import connectDB from "./config/dbconn.mjs";
-
+import cors from "cors";
 
 
 
@@ -30,13 +30,14 @@ connectDB();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(logmiddle);
+app.use(cors());
 
 // Global Err Handling
 app.use(globalMiddle);
 
 
-// app.use(log);
-// app.use(cors());
+
+
 
 // Routes
 

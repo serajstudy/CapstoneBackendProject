@@ -18,11 +18,41 @@ export const countriesData = [
 
 // Appointment
 export const appointmentsdata = [
-  { userId:"65a1b2c3d4e5f67890123456",countryId:"65a1b2c3d4e5f67890123457", message: "Interested in applying to universities in Canada." },
-  { userId:"65a1b2c3d4e5f67890123450",countryId:"65a1b2c3d4e5f67890123458",name: "Cynthia Lopez", user: "Elena Smith", message: "Need counseling for UK study visa." },
-  { userId:"65a1b2c3d4e5f67890123457",countryId:"65a1b2c4d4e5f67890173459",name: "David Kim", user: "Alice Johnson", message: "Follow-up appointment for document submission." },
-  { userId:"65a1b2c3d4e5f67890123446",countryId:"65a1b2c3d4e5f67890123457",name: "Elena Smith", user: "Cynthia Lopez", message: "Query about IELTS preparation classes." },
-  { userId:"65a1b2c3d4e5f67890123956",countryId:"65a1b2c3d4e5f67990123457",name: "Brian Carter", user: "David Kim", message: "Discuss scholarship opportunities in Australia." }
+  {
+    userId: "65a1b2c3d4e5f67890123456",
+    countryId: "65a1b2c3d4e5f67890123457",
+    name: "Alice Johnson",
+    email: "alice@example.com",
+    message: "Interested in applying to universities in Canada."
+  },
+  {
+    userId: "65a1b2c3d4e5f67890123450",
+    countryId: "65a1b2c3d4e5f67890123458",
+    name: "Cynthia Lopez",
+    email: "cynthia.lopez@example.com",
+    message: "Need counseling for UK study visa."
+  },
+  {
+    userId: "65a1b2c3d4e5f67890123457",
+    countryId: "65a1b2c4d4e5f67890173459",
+    name: "David Kim",
+    email: "david.kim@example.com",
+    message: "Follow-up appointment for document submission."
+  },
+  {
+    userId: "65a1b2c3d4e5f67890123446",
+    countryId: "65a1b2c3d4e5f67890123457",
+    name: "Elena Smith",
+    email: "elena.smith@example.com",
+    message: "Query about IELTS preparation classes."
+  },
+  {
+    userId: "65a1b2c3d4e5f67890123956",
+    countryId: "65a1b2c3d4e5f67990123457",
+    name: "Brian Carter",
+    email: "brian.carter@example.com",
+    message: "Discuss scholarship opportunities in Australia."
+  }
 ];
 
 
