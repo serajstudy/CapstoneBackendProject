@@ -4,23 +4,23 @@ const AppointmentSchema = new mongoose.Schema({
     countryId: { 
         type: mongoose.Schema.Types.ObjectId, 
         ref: "Country", 
-        required: false, // optional if you don’t want to require it
+        required: false, 
     },
     
     userId: { 
         type: mongoose.Schema.Types.ObjectId, 
         ref: "User", 
-        required: false, // optional if you don’t want to require it
+        required: false, 
     },
 
     name: { 
         type: String, 
-        required: true,   // customer name
+        required: true,   
     },
 
     email: { 
         type: String, 
-        required: true,   // customer email
+        required: true,   
     },
 
     message: { 
@@ -28,6 +28,6 @@ const AppointmentSchema = new mongoose.Schema({
         required: true, 
     },
 
-}, { timestamps: true }); // optional: adds createdAt and updatedAt
+}, { timestamps: true }); 
 
 export default mongoose.model("Appointment", AppointmentSchema);

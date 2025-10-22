@@ -1,4 +1,4 @@
-# Github link
+# Github link for CapstoneBackendProject and Capstone-FrontendProject
 https://github.com/serajstudy/CapstoneBackendProject.git
 
 https://github.com/serajstudy/Capstone-FrontendProject.git
@@ -54,11 +54,14 @@ Home.jsx
 Country.jsx
 Service.jsx 
 Profile.jsx
+OwnerMessage.jsx
+
 
 # /components
 Navbar.jsx
 Footer.jsx
 CountryCard.jsx
+Form.jsx
 # /api
  axiosConfig.mjs
 
